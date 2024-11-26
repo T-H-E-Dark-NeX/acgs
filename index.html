@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ACgen - AC Generator Simulation</title>
+  <link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1>Alternating Current Generator Simulator</h1>
+<div class="canvas-cont">
+    <div class="c c-xy">
+      <canvas class="xy"></canvas>
+      <div class="meta">
+        <div class="view">Top view</div>
+      </div>
+    </div>
+    <div class="c c-xz">
+      <canvas class="xz"></canvas>
+      <div class="meta">
+        <div class="view">Front view</div>
+      </div>
+    </div>
+  </div>
+  <article>
+    <div class="result">
+      <div class="large center">&rArr;&nbsp;<span class="eq">ε = <span class="res-b">2</span> &middot; (<span class="res-l">1</span> &middot; <span class="res-w">1</span>) &middot; <span class="res-omega">0.5</span> &middot; sin(<span class="res-omega-sin">0.5</span>t)</span></div>
+
+      <div class="large center">&rArr;&nbsp;<span class="eq">ε = <span class="product">1</span> &middot; sin(<span class="res-omega-prod">0.5</span>t)</span></div>
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+        <div class="options">
+          <label>
+            <div class="name">Length of coil: </div>
+            <input type="text" class="l" value="1">
+            <div class="unit eq">m</div>
+          </label>
+          <label>
+            <div class="name">Width of coil: </div>
+            <input type="text" class="w" value="1">
+            <div class="unit eq">m</div>
+          </label>
+          <label>
+            <div class="name">B (Magnetic field): </div> 
+            <input type="text" class="b" value="2">
+            <div class="unit eq">T</div>
+          </label>
+          <label>
+            <div class="name"><span class="eq">ω</span> (Angular velocity): </div>
+            <input type="text" class="omega" value="0.5">
+            <div class="unit eq">rad/s</div>
+          </label>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="large center">&nbsp;<span class="eq">ε = BAωsin(ωt)</span></div>
+        <div class="padd">
+          &nbsp;<span class="eq">ε</span> &rarr; Generated electromotive force (EMF, Volts)<br/>
+          <span class="eq">B</span> &rarr; Magnetic Field (Tesla)<br>
+          <span class="eq">A</span> &rarr; length of coil &middot; width of coil (m<sup>2</sup>)<br>
+          <span class="eq">ω</span> &rarr; Angular velocity (rad/s)
+        </div>
+        <div class="center sans">
+        The above describe the motion and generation of an ideal AC generator.
+        </div>
+      </div>
+      
+    </div>
+  </article>
+
+  <footer class="colophon">
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41471024-8', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>
